@@ -31,3 +31,15 @@
   border: 1px solid #056674;
   margin-top: 20px;
 }
+
+.createNoteForm .MuiSvgIcon-root {
+  color: #056674;
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .createNoteForm {
+    width: 280px;
+  }
+}

@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./CreateNoteForm.css";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import { useDispatch } from "react-redux";
-import { addNewNote } from "./notesSlice";
+import { addNote } from "./notesSlice";
+import { nanoid } from "@reduxjs/toolkit";
 
 function CreateNoteForm() {
   const [note, setNote] = useState({
@@ -25,12 +26,14 @@ function CreateNoteForm() {
 
   const handleClick = () => {
     if (note.title && note.content) {
-      dispatch(
-        addNewNote({
-          title: note.title,
-          content: note.content,
-        })
-      );
+      // dispatch(
+      //   addNewNote({
+      //     id: nanoid(),
+      //     title: note.title,
+      //     content: note.content,
+      //   })
+      // );
+      dispatch(addNote(note));
 
       setNote({
         title: "",
