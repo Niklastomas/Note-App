@@ -55,7 +55,7 @@
   content: "";
 }
 .loader:after {
-  background: #0dc5c1;
+  background: #66bfbf;
   width: 75%;
   height: 75%;
   border-radius: 50%;

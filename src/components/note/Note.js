@@ -17,7 +17,6 @@ function Note({ title, content, id }) {
   return (
     <div className="note">
       <h3>{title}</h3>
-      <p>{id}</p>
       <p>{content}</p>
       <DeleteIcon onClick={handleClick} fontSize="large" />
     </div>

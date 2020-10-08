@@ -19,7 +19,7 @@
   height: 30px;
   border: none;
   border-bottom: 2px solid #056674;
-  margin: 10px;
+  margin-bottom: 20px;
   outline: none;
 }
 
@@ -27,15 +27,28 @@
   font-family: "Montserrat", sans-serif;
   resize: none;
   outline: none;
-  width: 100%;
+  width: 96%;
   border: 1px solid #056674;
-  margin-top: 20px;
+  padding: 10px;
+}
+
+.icon-active {
+  color: #056674;
+}
+
+.icon-disabled {
+  color: lightgray;
 }
 
 .createNoteForm .MuiSvgIcon-root {
-  color: #056674;
+  /* color: #056674; */
   font-size: 50px;
   margin-top: 20px;
+}
+
+.createNoteForm .icon-active:hover {
+  cursor: pointer;
+  filter: brightness(1.5);
 }
 
 @media screen and (max-width: 600px) {

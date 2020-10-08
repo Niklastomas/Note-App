@@ -49,12 +49,16 @@ export const notesSlice = createSlice({
       state.status = "failed";
       state.error = action.error.message;
     },
+
     [addNote.fulfilled]: (state, action) => {
       state.notes.push(action.payload);
     },
 
     [deleteNote.fulfilled]: (state, action) => {
-      // return state.notes.filter((note) => note._id !== action.payload._id);
+      return {
+        ...state,
+        notes: state.notes.filter((note) => note._id !== action.payload._id),
+      };
     },
   },
 });
